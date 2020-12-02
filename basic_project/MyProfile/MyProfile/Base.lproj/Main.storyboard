@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom" translatesAutoresizingMaskIntoConstraints="NO" id="X99-4x-r9n">
+                                <rect key="frame" x="16" y="60" width="100" height="113.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="X99-4x-r9n" secondAttribute="height" multiplier="113:128" id="8Uk-p0-pWa"/>
+                                    <constraint firstAttribute="width" constant="100" id="qkJ-eF-5y4"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQK-ds-hlW">
+                                <rect key="frame" x="124" y="60" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="989-Qi-vfE">
+                                <rect key="frame" x="124" y="99.5" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="StJ-1n-smm">
+                                <rect key="frame" x="124" y="139.5" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CWr-Zb-kaO">
+                                <rect key="frame" x="16" y="189.5" width="382" height="656.5"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="989-Qi-vfE" firstAttribute="trailing" secondItem="EQK-ds-hlW" secondAttribute="trailing" id="2bL-43-axt"/>
+                            <constraint firstItem="CWr-Zb-kaO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="52c-p5-yor"/>
+                            <constraint firstItem="989-Qi-vfE" firstAttribute="trailing" secondItem="EQK-ds-hlW" secondAttribute="trailing" id="5hr-lB-NS8"/>
+                            <constraint firstItem="989-Qi-vfE" firstAttribute="leading" secondItem="EQK-ds-hlW" secondAttribute="leading" id="6fs-pf-trW"/>
+                            <constraint firstItem="X99-4x-r9n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="LAE-Vy-yVa"/>
+                            <constraint firstItem="EQK-ds-hlW" firstAttribute="leading" secondItem="X99-4x-r9n" secondAttribute="trailing" constant="8" id="Leh-vh-x6j"/>
+                            <constraint firstItem="989-Qi-vfE" firstAttribute="centerY" secondItem="X99-4x-r9n" secondAttribute="centerY" id="Lt3-bp-eX6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CWr-Zb-kaO" secondAttribute="bottom" constant="16" id="P7U-G5-jTZ"/>
+                            <constraint firstItem="CWr-Zb-kaO" firstAttribute="top" secondItem="X99-4x-r9n" secondAttribute="bottom" constant="16" id="RDP-86-xU8"/>
+                            <constraint firstItem="989-Qi-vfE" firstAttribute="trailing" secondItem="EQK-ds-hlW" secondAttribute="trailing" id="UM5-Nd-wus"/>
+                            <constraint firstItem="StJ-1n-smm" firstAttribute="bottom" secondItem="X99-4x-r9n" secondAttribute="bottom" id="Xun-IT-tXJ"/>
+                            <constraint firstItem="CWr-Zb-kaO" firstAttribute="trailing" secondItem="EQK-ds-hlW" secondAttribute="trailing" id="YBg-dG-YJU"/>
+                            <constraint firstItem="X99-4x-r9n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ybv-1Z-316"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EQK-ds-hlW" secondAttribute="trailing" constant="16" id="mQH-FG-aVe"/>
+                            <constraint firstItem="CWr-Zb-kaO" firstAttribute="leading" secondItem="X99-4x-r9n" secondAttribute="leading" id="qPm-IH-Z1F"/>
+                            <constraint firstItem="StJ-1n-smm" firstAttribute="leading" secondItem="EQK-ds-hlW" secondAttribute="leading" id="rdw-GW-Tl0"/>
+                            <constraint firstItem="StJ-1n-smm" firstAttribute="trailing" secondItem="EQK-ds-hlW" secondAttribute="trailing" id="wEX-J2-t1s"/>
+                            <constraint firstItem="989-Qi-vfE" firstAttribute="leading" secondItem="EQK-ds-hlW" secondAttribute="leading" id="waB-Z7-HGJ"/>
+                            <constraint firstItem="StJ-1n-smm" firstAttribute="trailing" secondItem="EQK-ds-hlW" secondAttribute="trailing" id="yJl-2X-9fV"/>
+                            <constraint firstItem="EQK-ds-hlW" firstAttribute="top" secondItem="X99-4x-r9n" secondAttribute="top" id="yzy-rU-yr5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CWr-Zb-kaO" secondAttribute="trailing" constant="16" id="zEk-WF-9y5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="yagom" width="167" height="160.5"/>
+    </resources>
+</document>
