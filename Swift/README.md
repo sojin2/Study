@@ -159,4 +159,4 @@ print("test num2 = \(test1.num2), \(Exm1().num2)")
 ㅇ
 ㅇ
 
-#sojin
+## sojin
