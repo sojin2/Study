@@ -33,21 +33,21 @@
 ***
 
 ## 배열
-***
+   
 ## 디렉터리
-***
+   
 ## 함수
-***
+   
 ## 튜플
 ***
 # 조건문
-***
+   
 ## switch case
 ***
 # 반복문
-***
+   
 ## for문
-***
+   
 ## while,repeat~while
 ***
 # class&struct/Enum
