@@ -4,14 +4,18 @@
 * [집단 자료형](#집단자료형)
    * [Array](#배열)
    * [Dictionary](#디렉터리)
- * [Set](#함수)
- * [Tupel](#튜플)
+   * [Set](#함수)
+   * [Tupel](#튜플)
+      
 * 조건문 
- * [Switch case](#switch-case)
+   * [Switch case](#switch-case)
+      
 * 반복문
- * [For문](#for문)
- * [while, repeat~while 문](#while,repeat~while-문)
+   * [For문](#for문)
+   * [while, repeat~while 문](#while,repeat~while-문)
+      
 * [class&struct/Enum](#class&struct/Enum)
+   
 * [객체와 인스턴스](#객체와-인스턴스)
 
 
