@@ -12,7 +12,7 @@
       
 * 반복문
    * [For문](#1.for문)
-   * [while, repeat~while 문](#2.while반복문)
+   * [while, repeat~while 문](#2.while-반복문)
       
 * [class&struct/Enum](#class&struct/Enum)
    * [class](#1.class)
