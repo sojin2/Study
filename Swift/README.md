@@ -6,18 +6,18 @@
    * [Set](#집합)
    * [Tupel](#튜플)
    * [Dictionary](#딕셔너리)
-      
+
 * 조건문 
    * [Switch case](#switch-case)
-      
+
 * 반복문
    * [For문](#1.for문)
    * [while, repeat~while 문](#2.while-반복문)
-      
-* [class&struct/Enum](#class&struct/Enum)
-   * [class](#1.class)
-   * [struct](#2.struct)
-   * [Enum](#3.enum)
+
+* [class&struct/Enum]
+   * [Class](#class)
+   * [Struct](#struct)
+   * [Enum](#enum)
    
 * [객체와 인스턴스](#객체와-인스턴스)
 
