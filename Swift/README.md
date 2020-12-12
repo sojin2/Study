@@ -3,7 +3,7 @@
 
 * [집단 자료형](#집단자료형)
    * [Array](#배열)
-   * [Dictionary](#디렉터리)
+   * [Dictionary](#딕셔너리)
    * [Set](#함수)
    * [Tupel](#튜플)
       
@@ -323,7 +323,173 @@ for row2 in cities {
 ```
 
 
-## 디렉터리
+## 딕셔너리
+
+사전에서 고유 단어와 그 의미가 연결되어 있는 것처럼, 고유 키(Key)와 그에 대응하는 값(Value)을 연결하여 데이터를 저장하는자료형 입니다.
+
+**딕셔너리를 사용할 때 주의할 점**
+
+* 하나의 키는 하나의 데이터에만 연결되어야 함
+* 하나의 딕셔너리에서 키는 중복될 수 없습니다. 중복해서 선언하면 아이템 추가가 아니라 수정이 이루어져 기존 키에 연결된 데이터가 제거 됨
+* 저장할 수 있는 데이터 타입에는 제한이 없지만, 하나의 딕셔너리에 저장하는 데이터 타입은 모두 일치해야 함
+* 딕셔너리의 아이템은 순서가 없지만, 내부적으로 순서가 있으므로 for~in을 통한 순환 탐색 가능
+* 키는 hash 연산이 가능한 타입이어야 함.
+
+
+**### 4.1. 딕셔너리 정의 방법**
+
+```
+//(let 또는 var) 변수명 = [ 키 : 데이터, 키 : 데이터,...]
+
+
+// 딕셔너리의 정적 선언과 값의 정의
+
+
+var capital = ["KR":"Seoul", "EN":"London", "FR":"Paris"]
+
+var students:Dictionary<String, Int> = ["jake":100, "philip":80, "amy":95]
+
+var students2:[String: Int] = ["jake":100, "philip":80, "amy":95] 
+
+
+// 선언 + 초기화
+
+
+// (var 또는 let) 변수명:Dictionary<타입1,타입2> =Dictionary <타입1,타입2> ()
+
+var capital : Dictionary<String, Int> = Dictionary<String, Int>()
+
+
+// (var 또는 let) 변수명:Dictionary<타입1,타입2> = <타입1:타입2> ()
+
+var capital : Dictionary<String, Int> = [String: Int]()
+
+
+// (var 또는 let) 변수명:Dictionary<타입1,타입2> = [:]
+
+var capital : Dictionary<String, Int> = [:]
+```
+
+
+
+
+
+### 4.2. 응용하기
+   
+**딕셔너리에 저장된 아이템을 제거하는 방법**
+
+* nil을 할당하는 방법
+* 명시적으로 removeValue(forKey:) 메소드 사용
+
+```
+import UIKit
+
+var capital = ["KR" : "Seoul","EN" : "London","FR" : "Paris"]
+
+capital["KR"]
+capital["EN"]
+capital["FR"]
+
+print(capital) //"["FR": "Paris", "EN": "London", "KR": "Seoul"]
+
+capital["JP"] = "Tokyo"
+print(capital) //"["JP": "Tokyo", "EN": "London", "FR": "Paris", "KR": "Seoul"]
+
+var newCapital = [String : String]()
+newCapital["JP"] = "Tokyo"
+
+if newCapital.isEmpty {
+    print("딕셔너리가 비어 있는 상태입니다.")
+} else {
+    print("딕셔너리의 크기는 현재 \(newCapital.count)입니다")
+}
+// "딕셔너리의 크기는 현재 1입니다\n"
+
+
+newCapital.updateValue("Seoul", forKey: "KR")
+//"KR" : "Seoul" 데이터가 추가되고 nil을 리턴함
+
+newCapital.updateValue("London", forKey: "EN")
+//"EN" : "London" 데이터가 추가되고 nil을 리턴함
+
+newCapital.updateValue("Sapporo", forKey: "JP")
+//"JP" : "Sapporo" 데이터가 추가되고 "Tokyo"을 리턴함
+
+
+// 아이템을 삭제하는 방법
+
+//1. nil 할당
+
+newCapital["CN"] = nil
+
+
+//2. remove 메소드 할당
+
+newCapital.removeValue(forKey: "CA")
+
+//["JP": "Sapporo", "KR": "Seoul", "EN": "London"]
+
+
+// "CA"에 해당하는 값을 삭제하고, 반환된 값을 removedValue에 할당한다.
+if let removedValue = newCapital.removeValue(forKey: "EN") {
+    print("삭제된 값은 \(removedValue)입니다.")
+} else {
+    print("아무 것도 삭제되지 않았습니다.")
+}
+// "삭제된 값은 London입니다.\n"
+```
+
+
+**옵셔널(Optional)**
+
+일단 먼저 옵셔널에대해서 생소한 개념이라 옵셔널의 정의 부터 알아보겠습니다. 옵셔널이란? 스위프트에서 도입된 새로운 개념으로서 언어 차원에서 프로그램의 안전성을 높이기위해 사용하는 개념을 말 합니다..
+그럼 딕셔너리에서 왜 옵셔널을 사용할까요?
+아래 예시 코드와 설명을 같이 보면서 이해해 봅시다.
+
+```
+print(newCapital )//["KR": "Seoul", "JP": "Sapporo"]
+
+Optional(newCapital["Sapporo"]) // nil
+
+Optional(newCapital["JP"]) // "Sapporo"
+
+Optional(newCapital["KR"]) //"Seoul"
+
+Optional(newCapital["EN"]) / / nil
+```
+
+옵셔널을 사용하여 해당 키를 검색?하면 값이 나오는걸 볼 수 있습니다.
+물론, 없는 키값을 입력하면 nil 값이 나옵니다.
+   
+딕셔너리는 키 자체가 일련의 순서를 가지고 있지 않기때문에 해시 연산에 의한 결과 값 역시 연속되는 값이 아닙니다.  —> 키와 값에 대한 보장이 없음   
+   
+즉, 딕셔너리에 특정 키를 통해 접근 할 때 해당 키에 대응하는 value 값이 존재하지 않을 수 있기 때문에 **옵셔널 타입의 값을 반환하는겁니다.**   
+      
+딕셔너리 키에 대응되는 값을 논 옵셔널로서 사용해야한다면 **옵셔널 바인딩**을 사용하거나, **강제 언레핑**을 사용하여 논 옵셔널 값을 얻어낼 수도 있습니다.
+
+**순회 탐색**
+
+```
+// 딕셔너리의 순회 기능을 사용하여 순회 탐색
+
+for row in newCapital {
+    let (key, value) = row
+    print("현재 데이터는 \(key) : \(value)")
+}
+
+for (key1, value2) in newCapital {
+    print("현재 데이터는 \(key1) : \(value2)")
+}
+
+-----------------------------------------------
+출력 값
+
+현재 데이터는 JP : Sapporo
+현재 데이터는 KR : Seoul
+
+```
+
+#집단자료형#
    
 ## 함수
    
