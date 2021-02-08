@@ -13,3 +13,12 @@
 
 * [OOP와 POP](https://github.com/sojin2/Study/blob/main/Swift_Grammer/object,instance.md)
 
+* [Any와 AnyObject](https://github.com/sojin2/Study/blob/main/Swift_Grammer/Any%EC%99%80%20AnyObject.md)
+
+* [Optional](https://github.com/sojin2/Study/blob/main/Swift_Grammer/Optional.md)
+
+* [Protocol](https://github.com/sojin2/Study/blob/main/Swift_Grammer/Protocol.md)
+
+* [Type Casting](https://github.com/sojin2/Study/blob/main/Swift_Grammer/Type Casting.md)
+
+
