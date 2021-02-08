@@ -19,6 +19,6 @@
 
 * [Protocol](https://github.com/sojin2/Study/blob/main/Swift_Grammer/Protocol.md)
 
-* [Type Casting](https://github.com/sojin2/Study/blob/main/Swift_Grammer/Type Casting.md)
+* [TypeCasting](https://github.com/sojin2/Study/blob/main/Swift_Grammer/Type Casting.md)
 
 
