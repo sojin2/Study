@@ -14,6 +14,8 @@
 
 그럼 이제 프로토콜에 대해서 자세히 알아볼까요?
 
+<br>
+
 # **1. Protocol**
 
 ---
@@ -32,6 +34,8 @@
 
 
 **메소드, 프로퍼티등을 "정의"만 하고, 이 프로토콜을 채택한 곳에서 "구현"을 한다.**
+
+<br>
 
 ### **(1) 프로토콜 정의 문법**
 
@@ -80,6 +84,7 @@ class SomeClass: SomeSuperclass, SomeProtocol{
 }
 ```
 
+<br>
 
 ## **1.1 Protocol property**
 
@@ -138,6 +143,7 @@ get만 선언된 description 프로퍼티는 연산 프로퍼티로 구현하고
 
 
 
+<br>
 
 
 ## **1.2 Protocol Method**
@@ -218,6 +224,7 @@ struct RubyNewService: NewMethodProtocol {
 
 
 
+<br>
 
 
 ## **1.3 프로토콜에서의 Mutating, static**
@@ -296,6 +303,8 @@ class RubyThread: MService {
 ```
 
 
+<br>
+
 
 ### **(2) static**
 타입 메소드나 타입 프로퍼티를 프로토콜에 선언하기 위해 사용하는 키워드 입니다.
@@ -336,6 +345,8 @@ class ValueObject: SomeTypeProperty {
 
 ```
 
+<br>
+<br>
 
 ## **1.4 프로토콜과 초기화 메소드**
 
@@ -421,6 +432,8 @@ class child: Parent, Init {
 ```
 
 
+<br>
+<br>
 
 ## **1.5 메소드와 연산 프로퍼티**
 
@@ -482,6 +495,8 @@ struct MultiImplement: NewMethodProtocol, SomeInitProtocol {
 }
 
 ```
+
+<br>
 <br>
 
 ## **1.6 타입으로서 프로토콜**
@@ -530,9 +545,14 @@ trans2.spin()
 trans2.hold()
 ```
 
+<br>
+<br>
+
 ## **1.7 프로토콜의 활용**
 
 ---
+
+<br>
 
 ### **(1). 확장 구문과 프로토콜**
 
@@ -590,6 +610,8 @@ Man은 Job 프로토콜을 구현하지 않기 때문에 doWork() 메소드 역�
 만약 프로토콜에 정의된 프로퍼티를 익스텐션에서 구현해야 한다면, 이때는 연산 프로퍼티로 구현해 주어야합니다.
 
 ---
+
+<br>
 
 ### **(2). 프로토콜의 상속**
 
@@ -683,6 +705,7 @@ boo(abc: ABC())
 타입 연산자가 무엇인지 모르시는 분들은 타입 캐스팅을 보고 오세요ㅎㅎ
 
 
+<br>
 
 #### - **is 연산자**
 
@@ -807,6 +830,9 @@ Carpet이 타입 캐스팅을 실패한 이유가 무엇일까요? Wheel 프로�
 
 
 ---
+
+<br>
+<br>
 
 **(3). 클래스 전용 프로토콜**
 
